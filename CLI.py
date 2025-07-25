@@ -12,8 +12,10 @@ while True:
             elif add_again == 'no':
                 num1 = float(input("Tell the first number: "))
             else:
-                print("Invalid input. Please answer 'yes' or 'no'.")
-                continue
+                if add_again == 'yes' and Current_result is not None:
+                  num1 = Current_result
+                  print(f"Using the last result: {num1}")
+                  
         additional_numbers = []
         num2 = float(input("Tell the second number: "))
 
